@@ -5,16 +5,13 @@ Ce projet permet d’effectuer une **analyse des sentiments** sur des tweets en 
  
  L’objectif est de prédire si un tweet est positif, négatif ou neutre, avec des outils adaptés à chaque besoin, du classique au dernier cri en NLP !
 
----
-
 ## Objectif du projet
 - Apprendre à traiter, visualiser et modéliser des données textuelles issues de réseaux sociaux.
 - Comparer les performances des approches traditionnelles et avancées en NLP.
 - Acquérir des compétences pratiques en prétraitement de texte, TF-IDF et Transformers.
 
----
-
 ## Structure du projet
+```bash
 Twitter_sentiments_analysis/
 ├── data/
 │   ├── twitter_training.csv
@@ -23,8 +20,7 @@ Twitter_sentiments_analysis/
 ├── requirements.txt
 ├── LICENSE
 └── README.md
-
----
+```
 
 ## Installation et pré-requis
 
@@ -45,8 +41,6 @@ Installe les dépendances :
 pip install -r requirements.txt
 ```
 
----
-
 ## Utilisation du projet
 
 ### Exécuter l'analyse
@@ -60,8 +54,6 @@ Lors de l'exécution, choisissez entre les deux approches :
 1. **Traditionnelle** : TF_IDF avec une régression logistique.
 2. **Deep Learning** : Modèles transformers (type BERT).
 3. **Les deux** : Comparaison des deux approches.
-
----
 
 ## Détails techniques
 
@@ -79,8 +71,6 @@ Lors de l'exécution, choisissez entre les deux approches :
 - Nuage de mots pour les termes fréquents.
 - Matrice de confusion et rapport de classification.
 
----
-
 ## Résultats attendus
 On obtiendra des métriques telles que :
 - Accuracy
@@ -89,20 +79,13 @@ On obtiendra des métriques telles que :
 
 Ainsi que des visualisations permettant de mieux comprendre les résultats obtenus par les deux approches.
 
----
-
 ## Amélioration futures
 
 - Testert d'autres modèles Transformers (RoBERTa, DistilBERT, etc.)
 - Déployer l'application sur une plateforme cloud (Streamlit, FastAPI)
 
----
-
 ## Auteurs
 - [Arnaud Stadler](https://github.com/arnaudstdr) - Développeur ML/DL
 
----
-
 ## Licence
 Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
----
