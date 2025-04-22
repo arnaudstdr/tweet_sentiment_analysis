@@ -81,11 +81,11 @@ Ainsi que des visualisations permettant de mieux comprendre les résultats obten
 
 ## Amélioration futures
 
-- Testert d'autres modèles Transformers (RoBERTa, DistilBERT, etc.)
+- Tester d'autres modèles Transformers (RoBERTa, DistilBERT, etc.)
 - Déployer l'application sur une plateforme cloud (Streamlit, FastAPI)
 
 ## Auteurs
-- [Arnaud Stadler](https://github.com/arnaudstdr) - Développeur ML/DL
+- [Arnaud Stadler](https://github.com/arnaudstdr) - Développeur ML/MLOps
 
 ## Licence
 Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
