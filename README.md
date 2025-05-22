@@ -1,108 +1,98 @@
-# Analyse des sentiments sur Twitter avec Machine Learning & Transformers
-Ce projet permet d’effectuer une **analyse des sentiments** sur des tweets en utilisant deux approches complémentaires :
-- **Traditionnelle** : TF_IDF avec une régression logistique.
-- **Deep Learning** : Modèles transformers (type BERT).
- 
- L’objectif est de prédire si un tweet est positif, négatif ou neutre, avec des outils adaptés à chaque besoin, du classique au dernier cri en NLP !
+# 🐦 Analyse des Sentiments sur Twitter avec Machine Learning & Transformers
 
----
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/release/python-310/)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Dockerfile](https://img.shields.io/badge/Docker-ready-blue?logo=docker)
 
-## Objectif du projet
-- Apprendre à traiter, visualiser et modéliser des données textuelles issues de réseaux sociaux.
-- Comparer les performances des approches traditionnelles et avancées en NLP.
-- Acquérir des compétences pratiques en prétraitement de texte, TF-IDF et Transformers.
+Ce projet propose une **analyse des sentiments** sur des tweets en combinant deux approches complémentaires :
+- 🔤 **Traditionnelle** : TF-IDF + régression logistique (scikit-learn)
+- 🤖 **Deep Learning** : Modèles Transformers (type BERT)
 
----
+L’objectif est de prédire si un tweet est positif, négatif ou neutre, en comparant la performance des méthodes classiques et avancées du NLP.
 
-## Structure du projet
-Twitter_sentiments_analysis/
-├── data/
-│   ├── twitter_training.csv
-│   └── twitter_validation.csv
-├── twitter_sentiment_analysis.ipynb
-├── requirements.txt
-├── LICENSE
-└── README.md
+## ✨ Fonctionnalités
+- Prédiction du sentiment d’un tweet (positif, négatif, neutre)
+- Deux pipelines : traditionnel (TF-IDF + logreg) et deep learning (BERT)
+- Visualisations : nuages de mots, matrices de confusion, rapports de classification
+- Notebook interactif pour l’exploration et la comparaison
+- Dockerisation complète
+- Prêt pour Dev Container VS Code
 
----
+## 📦 Installation locale
 
-## Installation et pré-requis
+### Option 1 : Environnement Python local
 
-Clone le projet :
+#### 1. Cloner le dépôt
 ```bash
 git clone https://github.com/ton_nom_utilisateur/Twitter_sentiments_analysis.git
 cd Twitter_sentiments_analysis
 ```
 
-Crée un environnement virtuel :
+#### 2. (Optionnel) Créer un environnement virtuel
 ```bash
 python -m venv env
 source env/bin/activate
 ```
 
-Installe les dépendances :
+#### 3. Installer les dépendances
 ```bash
 pip install -r requirements.txt
 ```
 
----
+### Option 2 : 🐳 Dockerisation
 
-## Utilisation du projet
+#### 1. Build de l’image Docker
+```bash
+docker build -t twitter-sentiments .
+```
 
-### Exécuter l'analyse
-Depuis le dossier racine du projet, lancer le notebook Jupyter :
+#### 2. Lancement du conteneur
+```bash
+docker run -it --rm -p 8888:8888 twitter-sentiments
+```
+➡️ Le notebook Jupyter sera accessible sur : http://localhost:8888
+
+## 🐳 Utilisation avec Dev Container
+
+Ce projet est prêt à être utilisé avec [Dev Containers](https://containers.dev/) de VS Code.
+
+- Installez l’extension **Dev Containers** sur VS Code.
+- Ouvrez le dossier du projet dans VS Code.
+- Cliquez sur `Reopen in Container` ou utilisez la palette de commandes (`F1`) :
+  - `Dev Containers: Reopen in Container`
+
+L’environnement de développement (Python, dépendances, outils) sera automatiquement configuré dans le conteneur.
+
+## 🚀 Utilisation du projet
+
+### 1. Lancer le notebook Jupyter
 ```bash
 jupyter notebook twitter_sentiment_analysis.ipynb
 ```
 
-### Options proposées
-Lors de l'exécution, choisissez entre les deux approches :
-1. **Traditionnelle** : TF_IDF avec une régression logistique.
-2. **Deep Learning** : Modèles transformers (type BERT).
-3. **Les deux** : Comparaison des deux approches.
+### 2. Choisir l’approche
+- **Traditionnelle** : TF-IDF + régression logistique
+- **Deep Learning** : BERT
+- **Comparaison** : Les deux pipelines
 
----
+## 📊 Visualisations & Résultats
+- Répartition des sentiments
+- Nuages de mots
+- Matrices de confusion
+- Rapports de classification
+- Scores : Accuracy, Precision, Recall, F1-score, ROC-AUC
 
-## Détails techniques
+## 🛣️ Roadmap
+- ✅ Pipeline traditionnel (TF-IDF + logreg)
+- ✅ Pipeline BERT (transformers)
+- ✅ Visualisations
+- ✅ Dockerisation
+- ✅ Dev Container
+- ⬜️ API REST (FastAPI/Flask)
+- ⬜️ Ajout d’autres modèles Transformers (RoBERTa, DistilBERT)
 
-### Prétraitement des données
-- Nettoyage de texte (suppression des stopwords, ponctuations, mentions et liens)
-- Tokenisation et lemmatisation avec NLTK
-- Vectorisation TF-IDF pour l’approche traditionnelle
+## 🧠 Auteur
+👤 Arnaud Stadler - Passionné de NLP, Machine Learning et Data Science
 
-### Modèles utilisés
-- **Régression logistique** (scikit-learn) pour l’approche traditionnelle
-- **BERT** (transformers) pour l’approche deep learning
-
-### Visualisations
-- Répartition des sentiments.
-- Nuage de mots pour les termes fréquents.
-- Matrice de confusion et rapport de classification.
-
----
-
-## Résultats attendus
-On obtiendra des métriques telles que :
-- Accuracy
-- Precision, Recall et F1-score
-- Courbe ROC-AUC
-
-Ainsi que des visualisations permettant de mieux comprendre les résultats obtenus par les deux approches.
-
----
-
-## Amélioration futures
-
-- Testert d'autres modèles Transformers (RoBERTa, DistilBERT, etc.)
-- Déployer l'application sur une plateforme cloud (Streamlit, FastAPI)
-
----
-
-## Auteurs
-- [Arnaud Stadler](https://github.com/arnaudstdr) - Développeur ML/DL
-
----
-
-## Licence
-Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
----
+## 📄 Licence
+Ce projet est open-source sous licence [MIT](LICENSE). Vous pouvez l’utiliser, le modifier et le redistribuer librement dans le respect de cette licence.
