@@ -2,3 +2,7 @@
 NOTES.md
 twitter-sentiment-modified.py
 twitter_sentiment_analysis.py
+
+sentiment_distribution.png
+tweet_length_by_sentiment.png
+frequent_words_by_sentiment.png
